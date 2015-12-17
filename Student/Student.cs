@@ -6,21 +6,12 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    public class Student
+    public class Student : Person
     {
         private int sumOfLetterGrades;
         private int totalClassesTaken;
 
-        public Student(int id)
-        {
-            this.Id = id;
-        }
-
-        public int Id { get; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
+        public Student(int id) : base(id) { }
 
         public double GradePointAverage =>
             (totalClassesTaken != 0) ? (double)sumOfLetterGrades / (double)totalClassesTaken : 0;
