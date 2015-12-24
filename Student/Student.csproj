@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assistant.cs" />
     <Compile Include="Grade.cs" />
+    <Compile Include="ITeahing.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Program.cs" />

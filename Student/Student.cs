@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Student
 {
@@ -10,6 +11,7 @@ namespace Student
     {
         private int sumOfLetterGrades;
         private int totalClassesTaken;
+        //protected ArrayList classes = new ArrayList();
 
         public Student(int id) : base(id) { }
 
@@ -21,5 +23,21 @@ namespace Student
             this.sumOfLetterGrades += (int)letterGrade;
             this.totalClassesTaken++;
         }
+
+        //public virtual string SubjectArea { get; set; }
+
+        //public IEnumerable ClassTitles { get; set; }
+
+        //public void AddClassTitle(string title)
+        //{
+        //    if (!classes.Contains(title))
+        //        classes.Add(title);
+        //}
+
+        //public void RemoveClassTitle(string title)
+        //{
+        //    classes.Remove(title);
+        //}
+
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    public class Professor : Person
+    public class Professor : Person, ITeahing
     {
         public Professor(int id) : base(id) { }              
 
@@ -26,6 +26,8 @@ namespace Student
             classTitles.Remove(title);
         }
 
-        public IEnumerable ClassTitles => classTitles;
+        //public IEnumerable ClassTitles => classTitles;
+
+        public IEnumerable ClassTitles { get; set; }
     }
 }
