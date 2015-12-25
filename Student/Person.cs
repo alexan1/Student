@@ -8,7 +8,7 @@ namespace Student
 {
     public abstract class Person
     {
-        public Person(int id)
+        protected Person(int id)
         {
             this.Id = id;
         }
