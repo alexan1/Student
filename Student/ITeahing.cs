@@ -11,7 +11,7 @@ namespace Student
     {
         string SubjectArea { get; set; }
 
-        IEnumerable ClassTitles { get; }
+        IEnumerable<string> ClassTitles { get; }
 
         void AddClassTitle(string title);
 

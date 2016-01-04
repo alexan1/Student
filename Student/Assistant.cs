@@ -11,15 +11,9 @@ namespace Student
     {
         public Assistant(int id) : base(id) { }
 
-        private ArrayList classes = new ArrayList();
+        private List<string> classes = new List<string>();
 
-        public IEnumerable ClassTitles
-        {
-            get
-            {
-                return classes;
-            }
-        }
+        public IEnumerable<string> ClassTitles => classes;       
 
         public string SubjectArea { get; set; }
 

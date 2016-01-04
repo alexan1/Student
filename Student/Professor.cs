@@ -13,7 +13,7 @@ namespace Student
 
         public string SubjectArea { get; set; }
 
-        private ArrayList classTitles = new ArrayList();
+        private List<string> classTitles = new List<string>();
 
         public void AddClassTitle(string title)
         {
@@ -26,8 +26,8 @@ namespace Student
             classTitles.Remove(title);
         }
 
-        //public IEnumerable ClassTitles => classTitles;
+        public IEnumerable<string> ClassTitles => classTitles;
 
-        public IEnumerable ClassTitles { get; set; }
+        //public IEnumerable ClassTitles { get; set; }
     }
 }
