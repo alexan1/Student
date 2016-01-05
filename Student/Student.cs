@@ -11,6 +11,7 @@ namespace Student
     {
         private int sumOfLetterGrades;
         private int totalClassesTaken;
+        private int totalPoints;
         //protected ArrayList classes = new ArrayList();
 
         public Student(int id) : base(id) { }
@@ -24,20 +25,10 @@ namespace Student
             this.totalClassesTaken++;
         }
 
-        //public virtual string SubjectArea { get; set; }
-
-        //public IEnumerable ClassTitles { get; set; }
-
-        //public void AddClassTitle(string title)
-        //{
-        //    if (!classes.Contains(title))
-        //        classes.Add(title);
-        //}
-
-        //public void RemoveClassTitle(string title)
-        //{
-        //    classes.Remove(title);
-        //}
+        internal void AssignGrade(string assigment, int points)
+        {
+            totalPoints += points;
+        }
 
     }
 }

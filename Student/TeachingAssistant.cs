@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    class Assistant : Student, ITeahing
+    class TeachingAssistant : Student, ITeahing
     {
-        public Assistant(int id) : base(id) { }
+        public TeachingAssistant(int id) : base(id) { }
 
         private List<string> classes = new List<string>();
 
