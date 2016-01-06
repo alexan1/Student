@@ -11,6 +11,8 @@ namespace Student
     {
 
         public EventHandler<AddClassEventArgs> OnClassAdded;
+        private int  totalPointsGiven;
+        private int numberOfGradesGiven;
         public Teacher(int id) : base(id) { }              
 
         public string SubjectArea { get; set; }
@@ -39,7 +41,19 @@ namespace Student
             }
         }
 
-        //public IEnumerable ClassTitles { get; set; }
+        private int computePoints(string assigment, string result)
+        {
+            var grade = new Random().Next(0, 100);
+            totalPointsGiven += grade;
+            numberOfGradesGiven++;
+
+            return grade;
+        }
+
+        public double AverageStudentGrade()
+        {
+            return (double)totalPointsGiven / (double)numberOfGradesGiven;
+        }
     }
 
     public class AddClassEventArgs : EventArgs
@@ -54,4 +68,6 @@ namespace Student
             this.Subject = subject;
         }
     }
+
+   
 }

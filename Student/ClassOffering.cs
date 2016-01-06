@@ -24,5 +24,10 @@ namespace Student
             var points = gradingFunc(assigment, result);
             enrollee.AssignGrade(assigment, points);
         }
+
+        public double AverageGPAForStudents()
+        {
+            return Enumerable.Average(students.Select(s => s.GradePointAverage));
+        }
     }
 }
